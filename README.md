@@ -1,8 +1,14 @@
-## Running the Application
+# reverse proxy server
 
-To run the application, use the following command:
+this module is part of my challenge **scale-hustle** to clear all the tasks in noob level!!
 
-Make sure you have docker daemon running:
+for context refer: scale-hustle[https://github.com/ssenthilnathan3/scale-hustle.git]
+
+## running the app
+
+to run the application, use the following command:
+
+make sure you have docker daemon running:
 
 ```sh
 make run-containers
@@ -12,14 +18,14 @@ make run-containers
 make run-proxy-server
 ```
 
-Ensure that you have the necessary configurations set in `internal/config.yaml`.
+ensure that you have the necessary configurations set in `internal/config.yaml`.
 
-## Health Check
+## health check
 
-To perform a health check, use the following command:
+to perform a health check, use the following command:
 
 ```sh
 make health_check
 ```
 
-This will verify that the application is running correctly.
+this will verify that the application is running correctly.
