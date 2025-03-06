@@ -25,7 +25,7 @@ func ProxyRequestHandler(proxy *httputil.ReverseProxy, url *url.URL, endpoint st
 		path := r.URL.Path
 		r.URL.Path = strings.TrimLeft(path, endpoint)
 
-		fmt.Printf("[ TinyRP ] Redirecting request to %s at %s\n", r.URL, time.Now().UTC())
+		fmt.Printf("[rpxy] Redirecting request to %s at %s\n", r.URL, time.Now().UTC())
 		proxy.ServeHTTP(w, r)
 	}
 }

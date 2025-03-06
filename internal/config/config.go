@@ -24,9 +24,9 @@ type configuration struct {
 var Configuration *configuration
 
 func NewConfiguration() (*configuration, error) {
-	viper.AddConfigPath("internal")
+	viper.AddConfigPath("data")
 	viper.SetConfigName("config")
-	viper.SetConfigName("yaml")
+	viper.SetConfigType("yaml")
 	viper.AutomaticEnv()
 	viper.SetEnvKeyReplacer(strings.NewReplacer(".", "_"))
 	err := viper.ReadInConfig()

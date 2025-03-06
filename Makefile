@@ -11,3 +11,12 @@ stop:
 	docker stop server2
 	docker stop server3
 	docker stop server4
+
+.PHONY: help
+help:
+	@echo "Available commands:"
+	@grep -E '^\.[A-Z]+:' $(MAKEFILE_LIST) | sed 's/^\.//'
+
+.PHONY: run-proxy-server
+run-proxy-server:
+	go run cmd/main.go
