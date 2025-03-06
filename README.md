@@ -2,7 +2,7 @@
 
 this module is part of my challenge **scale-hustle** to clear all the tasks in noob level!!
 
-for context refer: scale-hustle[https://github.com/ssenthilnathan3/scale-hustle.git]
+for context refer: https://github.com/ssenthilnathan3/scale-hustle.git
 
 ## running the app
 
