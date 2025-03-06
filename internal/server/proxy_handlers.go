@@ -23,7 +23,7 @@ func ProxyRequestHandler(proxy *httputil.ReverseProxy, url *url.URL, endpoint st
 		r.Host = url.Host
 
 		path := r.URL.Path
-		r.URL.Path = strings.TrimLeft(path, endpoint)
+		r.URL.Path = strings.TrimPrefix(r.URL.Path, path)
 
 		fmt.Printf("[rpxy] Redirecting request to %s at %s\n", r.URL, time.Now().UTC())
 		proxy.ServeHTTP(w, r)

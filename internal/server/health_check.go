@@ -1,8 +1,11 @@
 package server
 
-import "net/http"
+import (
+	"fmt"
+	"net/http"
+)
 
-// ping returns a "pong" message
 func ping(w http.ResponseWriter, r *http.Request) {
+	fmt.Printf("pong sent for %s\n", r.URL)
 	w.Write([]byte("pong"))
 }

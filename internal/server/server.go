@@ -21,7 +21,6 @@ func Run() error {
 	for _, resources := range config.Resources {
 		url, _ := url.Parse(resources.Destination_url)
 		proxy := NewProxy(*url)
-
 		mux.HandleFunc(resources.Endpoint, ProxyRequestHandler(proxy, url, resources.Endpoint))
 	}
 

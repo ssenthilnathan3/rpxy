@@ -20,3 +20,8 @@ help:
 .PHONY: run-proxy-server
 run-proxy-server:
 	go run cmd/main.go
+
+.PHONY: health_check
+health_check:
+	go run cmd/main.go & sleep 2
+	curl -I http://localhost:8080/ping
